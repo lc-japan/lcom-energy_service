@@ -1,6 +1,6 @@
 :root {
     --beige-color: #f3f1e8;
-    --blue-color: #29acd2;
+    --blue-color: rgb(34 121 162);
     --green-color:#029405;
     --dark-blue-color:  rgb(0, 80, 147);
     --note-color:#9a9064;
@@ -56,13 +56,19 @@ span.note::before, ul.notes > li::before {
 }
 .catchphrase {
     text-align: center;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     margin-bottom: 60px;
+    font-weight: bold;
 }
 .catchphrase .h1 {
-    font-size: 22px;
-    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    line-height: 34px;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-size: clamp(1.25rem, 2rem + 2vw, 3.5rem);
+    line-height: 1.5;
+    color: var(--blue-color);
+}
+.catchphrase span {
+    font-size: 2rem;
+    font-size: clamp(1.25rem, 0.9rem + 2.3vw, 2rem);
 }
 .point-wrap {
     display: flex;
