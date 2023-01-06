@@ -62,14 +62,14 @@ span.note::before, ul.notes > li::before {
 .intro_point {
     display: flex;
     justify-content: center;
-    column-gap: 20px;
-    flex-wrap: wrap;
-
+    column-gap: 2vw;
 }
 .intro_point_item {
     background: linear-gradient(blue, white);
     border-radius: 50%;
-    min-width: 220px;
+    flex: 1;
+    min-width: 120px;
+    max-width: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,10 +82,10 @@ span.note::before, ul.notes > li::before {
 }
 .intro_point_item p {
     font-size: 1rem;
-    font-size: clamp(0.5rem, 0.7rem + 0.9vw, 2rem);
+    font-size: clamp(0.5rem, 0.5rem + 0.75vw, 2rem);
     line-height: 1.3;
     color: white;
-    padding: 20px 20px 0;
+    padding: 1em 1em 0;
 }
 .intro_point_item span {
     color: var(--yellow-color);
@@ -93,35 +93,50 @@ span.note::before, ul.notes > li::before {
 }
 
 
+/* Support Section  */
+#support {
+    background: var(--beige-color);
+}
+#support h2 {
+    padding: 1em 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+#support .two-col {
+    display: flex;
+    column-gap: 20px;
+}
+#support .two-col > div {
+    flex: 1;
+}
+#support .support-left {
+    display: flex;
+    flex-direction: column;
+}
+#support .support-left img {
+    flex: 3;
+}
+#support .support-left .tenken {
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#support table {
+    box-sizing: content-box;
+    border: 1px solid white;
+}
+#support table th, #support table td {
+    border: 1px solid white;
+}
+
 
 /* Media Queries  */
 @media screen and (max-width: 768px) {
     section {
         padding: 25px 0;
     }
-    .row-main {
-        flex-direction: column;
-    }
-    .row-main > * {
-        margin-inline: auto;
-        flex: 1;
-        width: 100%;
-    }
-    .point-wrap p {
-        line-height: 1.5;
-    }
-    .concerns .row-main {
-        gap: 0;
-    }
-    .concerned-image {
-        order: 2;
-        max-width: 300px;
-
-    }
-    .bubble-text {
-        padding: 40px 0 60px;
-    }
-    #maintenance .row-main {
-        margin-bottom: 0;
+    .catchphrase {
+        margin-bottom: 30px;
     }
 }
