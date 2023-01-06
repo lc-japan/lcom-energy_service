@@ -62,12 +62,14 @@ span.note::before, ul.notes > li::before {
 .intro_point {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+
 }
 .intro_point_item {
     background: linear-gradient(blue, white);
     border-radius: 50%;
-    width: 250px;
+    min-width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
