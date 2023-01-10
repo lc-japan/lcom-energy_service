@@ -6,6 +6,7 @@
     --green-color:#029405;
     --dark-blue-color:  rgb(0, 80, 147);
     --note-color:#9a9064;
+    --gray-color: #424753;
     --gray-square-size: 60px;
     --options-title-height: 50px;
 }
@@ -29,12 +30,13 @@ main img {
 }
 span.note {
     color: var(--note-color);
+    color: var(--gray-color);
     display: block;
 }
 span.note::before, ul.notes > li::before {
-    content: '※';
+    content: '';
     position: relative;
-    padding-right: 5px;
+    padding-right: 20%;
 }
 .flame-line {
     margin-bottom: 60px;
@@ -107,7 +109,7 @@ span.note::before, ul.notes > li::before {
 }
 #support .two-col {
     display: flex;
-    column-gap: 20px;
+    gap: 20px;
 }
 #support .two-col > div {
     flex: 1;
@@ -125,15 +127,32 @@ span.note::before, ul.notes > li::before {
     border-radius: 10px;
     background: white;
     font-weight: 900;
+    padding: 20px 20px 10px;
+    position: relative;
+    width: 80%;
+    list-style: none;
 }
-#support .support-map .fee {
+#support .support-map .fees li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+#support .support-map span.fee {
     color: var(--blue-color);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    padding-left: 5%;
+}
+#support .support-map .fees img {
+    position: absolute;
+    bottom: -5%;
+    right: -20%;
+    width: 35%;
+    height: auto;
 }
 
 #support .table-title {
     margin: 0;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 #support table {
     box-sizing: content-box;
@@ -144,6 +163,7 @@ span.note::before, ul.notes > li::before {
     border: 2px solid white;
     text-align: center;
     color: black;
+    line-height: 2;
 }
 #support table th {
     color: white;
@@ -266,5 +286,12 @@ span.note::before, ul.notes > li::before {
     }
     .catchphrase {
         margin-bottom: 30px;
+    }
+
+    #support .two-col {
+        flex-direction: column;
+    }
+    #support .support-map .fees {
+        width: 90%;
     }
 }
