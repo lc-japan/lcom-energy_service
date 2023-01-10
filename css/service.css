@@ -1,6 +1,7 @@
 :root {
     --beige-color: #f3f1e8;
-    --blue-color: rgb(34 121 162);
+    --blue-color: #086bb5;
+    /* --blue-color: rgb(34 121 162); */
     --yellow-color: rgb(238 229 95);
     --green-color:#029405;
     --dark-blue-color:  rgb(0, 80, 147);
@@ -99,8 +100,8 @@ span.note::before, ul.notes > li::before {
 }
 #support h2 {
     padding: 1em 0;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
 }
 #support .two-col {
     display: flex;
@@ -109,25 +110,39 @@ span.note::before, ul.notes > li::before {
 #support .two-col > div {
     flex: 1;
 }
-#support .support-left {
+#support .support-map {
     display: flex;
     flex-direction: column;
 }
-#support .support-left img {
+#support .support-map img {
     flex: 3;
 }
-#support .support-left .tenken {
+#support .support-map .fees {
     flex: 1;
     border: 2px solid black;
     border-radius: 10px;
 }
+#support .support-map .fee {
+    color: var(--blue-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 
+#support .table-title {
+    margin: 0;
+    font-weight: 600;
+}
 #support table {
     box-sizing: content-box;
-    border: 1px solid white;
+    width: 100%;
 }
 #support table th, #support table td {
-    border: 1px solid white;
+    border: 2px solid white;
+    text-align: center;
+}
+#support table th {
+    color: white;
+    background: var(--blue-color);
 }
 
 
