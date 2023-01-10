@@ -24,6 +24,9 @@ h3 {
     font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
     font-weight: 700;
 }
+p {
+    color: black;
+}
 main img {
     width: 100%;
 }
@@ -118,6 +121,7 @@ span.note::before, ul.notes > li::before {
 }
 #support .support-map img {
     flex: 3;
+    object-fit: contain;
 }
 #support .support-map .fees {
     flex: 1;
@@ -142,6 +146,7 @@ span.note::before, ul.notes > li::before {
 #support table th, #support table td {
     border: 2px solid white;
     text-align: center;
+    color: black;
 }
 #support table th {
     color: white;
@@ -155,8 +160,9 @@ span.note::before, ul.notes > li::before {
     position: relative;
 }
 #options h2 {
-    font-size: 1.5rem;
-    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
+    color: var(--blue-color);
+    font-size: 1.72rem;
+    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.72rem);
     font-weight: 700;
     border: 5px solid var(--blue-color);
     border-top-left-radius: 20px;
@@ -173,21 +179,58 @@ span.note::before, ul.notes > li::before {
     padding: 10px 20px 0;
 
 }
-
 .options {
     display: flex;
     gap: 10px;
 }
-
-.options .option {
+.option {
     flex: 1;
+    background: var(--beige-color);
 }
-.options .option .option-title {
+.option .option-title {
     text-align: center;
     background: var(--blue-color);
     color: white;
+    font-size: 1.5rem;
+    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
+    line-height: 1.5;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.option-title::before {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+#option_1 .option-title::before {
+    background-image: url(/img/service/icon_option_eye.png);
+}
+#option_2 .option-title::before {
+    background-image: url(/img/service/icon_option_eye.png);
+}
+#option_3 .option-title::before {
+    background-image: url(/img/service/icon_option_eye.png);
+}
+#option_4 .option-title::before {
+    background-image: url(/img/service/icon_option_eye.png);
 }
 
+.option-image, .option-text {
+    padding: 0 20px;
+}
+.option-image {
+    margin-bottom: 10px;
+}
+.option-image img {
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 2px black;
+}
 
 
 /* Media Queries  */
