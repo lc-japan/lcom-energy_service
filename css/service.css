@@ -254,7 +254,11 @@ span.note::before, ul.notes > li::before {
     left: -5px;
 }
 
-
+.option-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .option-image, .option-text {
     padding: 0 20px;
@@ -307,5 +311,13 @@ span.note::before, ul.notes > li::before {
     }
     #support .support-map .fees {
         width: 90%;
+    }
+
+    #options .options {
+        flex-direction: column;
+    }
+    #options .options .option-content {
+        display: flex;
+        flex-direction: row;
     }
 }
