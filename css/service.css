@@ -41,6 +41,9 @@ span.note::before, ul.notes > li::before {
 .flame-line {
     margin-bottom: 60px;
 }
+.mobile-hidden {
+    display: block;
+}
 
 
 /* Intro Section  */
@@ -267,12 +270,18 @@ span.note::before, ul.notes > li::before {
 #outro {
     padding-top: 0;
 }
-#outro p {
-    font-size: 1.17rem;
-    font-weight: 700;
+#outro h2 {
     text-align: center;
+    line-height: 1.5;
+    /* word-break: keep-all; */
+    margin-bottom: 2em;
 }
-
+#outro .tel {
+    color: var(--blue-color);
+    font-size: 3rem;
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+    width: fit-content;
+}
 
 /* SNS Section  */
 #sns {
@@ -280,8 +289,12 @@ span.note::before, ul.notes > li::before {
     background: lawngreen;
 }
 
+
 /* Media Queries  */
 @media screen and (max-width: 768px) {
+    .mobile-hidden {
+        display: none;
+    }
     section {
         padding: 25px 0;
     }
