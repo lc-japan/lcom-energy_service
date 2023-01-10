@@ -7,6 +7,7 @@
     --dark-blue-color:  rgb(0, 80, 147);
     --note-color:#9a9064;
     --gray-square-size: 60px;
+    --options-title-height: 50px;
 }
 
 section {
@@ -97,6 +98,7 @@ span.note::before, ul.notes > li::before {
 /* Support Section  */
 #support {
     background: var(--beige-color);
+    padding-bottom: calc(50px + var(--options-title-height));
 }
 #support h2 {
     padding: 1em 0;
@@ -144,6 +146,47 @@ span.note::before, ul.notes > li::before {
     color: white;
     background: var(--blue-color);
 }
+
+
+/* Options Section  */
+#options {
+    border-top: 5px solid var(--blue-color);
+    position: relative;
+}
+#options h2 {
+    font-size: 1.5rem;
+    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
+    font-weight: 700;
+    border: 5px solid var(--blue-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none;
+    position: absolute;
+    top: calc(-1*var(--options-title-height));
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: var(--options-title-height);
+    background: white;
+    padding: 10px 20px 0;
+
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+}
+
+.options .option {
+    flex: 1;
+}
+.options .option .option-title {
+    text-align: center;
+    background: var(--blue-color);
+    color: white;
+}
+
 
 
 /* Media Queries  */
