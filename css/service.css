@@ -123,6 +123,7 @@ span.note::before, ul.notes > li::before {
     flex: 1;
     border: 2px solid black;
     border-radius: 10px;
+    background: white;
 }
 #support .support-map .fee {
     color: var(--blue-color);
