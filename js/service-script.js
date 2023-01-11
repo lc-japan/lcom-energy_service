@@ -23,13 +23,13 @@ gup.forEach(item => {
 // #Intro Section Timeline
 const t1 = gsap.timeline({
     scrollTrigger: {
-        trigger: '.concerns',
+        trigger: '#concerns',
         start: "top 90%",
         // markers: true
       }
 })
 t1
-    .from('.concerns h2', {
+    .from('#concerns h2', {
         scale: 0,
         duration: 1,
         ease: 'sine.out'

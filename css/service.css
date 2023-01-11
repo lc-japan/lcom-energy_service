@@ -138,6 +138,63 @@ span.note::before, ul.notes > li::before {
     font-size: 120%;
 }
 
+/* Concerns Section  */
+#concerns h2 {
+    color: var(--dark-blue-color);
+    margin-bottom: 1em;
+}
+#concerns h2 span {
+    display: inline-block;
+    animation: rock 3s infinite alternate-reverse;
+}
+@keyframes rock {
+    from {
+        transform: rotate(-10deg)
+    }
+    to {
+        transform: rotate(27deg);
+    }
+}
+.concerns {
+    display: flex;
+}
+.concerned-image {
+    flex: 2;
+    animation: wiggle 5s infinite alternate-reverse;
+}
+@keyframes wiggle {
+    from {
+        transform: rotate(-1deg);
+    }
+    to {
+        transform: rotate(1deg);
+    }
+}
+.concerned-image img {
+    width: 100%;
+    height: 100%;
+}
+.bubble {
+    flex: 3;
+    background-image: url(/img/service/bubble.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bubble-image {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+.bubble-text {
+    position: relative;
+    top: 17%;
+}
+.bubble-text ul {
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.2rem);
+    width: fit-content;
+    margin-inline: auto;
+    line-height: 1.7;
+}
 
 /* Support Section  */
 #support {
@@ -187,7 +244,7 @@ span.note::before, ul.notes > li::before {
     padding-left: 5%;
 }
 #support .support-map .support-fee-extra {
-    left: 20%;
+    left: 17%;
     display: block;
     position: relative;
 }
