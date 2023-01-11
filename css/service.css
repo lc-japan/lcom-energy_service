@@ -160,11 +160,12 @@ span.note::before, ul.notes > li::before {
     }
 }
 .concerns {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    display: block;
     position: relative;
     height: 400px;
+}
+.concerns .bubbles {
+    margin-bottom: 20px;
 }
 .concerns .bubbles .bubble {
     width: 35%;
@@ -188,11 +189,11 @@ span.note::before, ul.notes > li::before {
 }
 .bubble:nth-child(2) {
     top: 10%;
-    left: 10%;
+    left: 12%;
 }
 .bubble:nth-child(3) {
     top: 10%;
-    right: 10%;
+    right: 12%;
 }
 .bubble:nth-child(4) {
     bottom: 25%;
@@ -201,6 +202,12 @@ span.note::before, ul.notes > li::before {
 .scream-image {
     max-width: 200px;
     display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.scream-image img {
     animation: shaking 1ms infinite alternate-reverse;
 }
 @keyframes shaking {
@@ -211,6 +218,21 @@ span.note::before, ul.notes > li::before {
         transform: rotate(3deg);
     }
 }
+@media screen and (max-width: 32em) {
+    .concerns {
+        height: auto;
+    }
+    .concerns .bubbles .bubble {
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .scream-image {
+        position: relative;
+        max-width: 100px;
+    }
+}
+    
 
 
 /* Support Section  */
@@ -304,8 +326,6 @@ span.note::before, ul.notes > li::before {
 }
 #options h2 {
     color: var(--blue-color);
-    font-size: 1.72rem;
-    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.72rem);
     font-weight: 700;
     border: 5px solid var(--blue-color);
     border-top-left-radius: 20px;
