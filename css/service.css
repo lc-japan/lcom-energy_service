@@ -11,6 +11,9 @@
     --options-title-height: 50px;
 }
 
+body {
+    font-size: 16px;
+}
 section {
     padding: 50px 0;
 }
@@ -25,6 +28,7 @@ h3 {
     font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
     font-weight: 700;
 }
+
 main img {
     width: 100%;
 }
@@ -276,7 +280,7 @@ span.note::before, ul.notes > li::before {
 .option-fee-text {
     margin-bottom: 0;
     line-height: 1.2;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .option-fee-yen {
     color: var(--blue-color);
