@@ -53,7 +53,7 @@ t2
         duration: 1,
         ease: 'sine.out'
     },
-    '<1.5'
+    '<1'
     )
 
 
