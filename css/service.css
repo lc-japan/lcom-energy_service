@@ -2,9 +2,9 @@
     --beige-color: #f3f1e8;
     --blue-color: #086bb5;
     --light-blue-color: rgb(71, 170, 216);
-    --yellow-color: rgb(238 229 95);
+    --yellow-color: #f2e951;
     --green-color:#029405;
-    --dark-blue-color:  rgb(0, 80, 147);
+    --dark-blue-color: #004e97;
     --note-color:#9a9064;
     --gray-color: #dadada;
     --gray-square-size: 60px;
@@ -427,23 +427,35 @@ span.note::before, ul.notes > li::before {
 
 
 
-/* Outro Section  */
-#outro {
-    padding-top: 0;
+/* Contact Section  */
+#contact {
+    background: var(--dark-blue-color);
+    color: white;
 }
-#outro h2 {
+#contact h2 {
     text-align: center;
     line-height: 1.5;
     /* word-break: keep-all; */
     margin-bottom: 2em;
 }
-#outro .tel {
-    color: var(--blue-color);
+#contact h2 p {
+    font-size: 1rem;
+    word-break: keep-all;
+}
+#contact h2 span {
+    color: var(--yellow-color);
+    font-size: 1rem;
+}
+#contact .tel {
     font-size: 3rem;
     font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
     width: fit-content;
     text-indent: initial;
 }
+#contact .tel a {
+    color: white;
+}
+
 
 /* SNS Section  */
 #sns {

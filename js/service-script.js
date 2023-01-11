@@ -20,7 +20,62 @@ gup.forEach(item => {
 
 
 
-// #Intro Section Timeline
+
+// Intro Section 
+// gsap.from(".intro_point_item", {
+//     scrollTrigger: {
+//         trigger: ".intro_point", 
+//         start: "top 80%",
+//     },
+//     y: 100,
+//     autoAlpha: 0,
+//     stagger: 0.5,
+//     ease: "sine.out",
+//     duration: 1.5
+// })
+// Intro Section Timeline
+const t2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#intro',
+        start: "top 90%",
+        // markers: true
+      }
+})
+t2
+    .from('.catchphrase', {
+        scale: 0,
+        duration: 1,
+        ease: 'power2.easeOut'
+    })
+    .from('.intro_point', {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: 'sine.out'
+    },
+    '<1.5'
+    )
+
+
+// TABLE LOLOLOL
+gsap.from(".maintenance-table td", {
+    scrollTrigger: {
+        trigger: ".maintenance-table", 
+        start: "top 80%",
+    },
+    y: 100,
+    autoAlpha: 0,
+    stagger: {
+        amount: 3,
+        from: "random",
+        repeat: -1,
+    },
+    ease: "sine.out",
+    duration: 1
+})
+
+
+// Concerns Section Timeline
 const t1 = gsap.timeline({
     scrollTrigger: {
         trigger: '#concerns',
@@ -43,7 +98,7 @@ t1
     )
     .from('.bubble', {
         opacity: 0,
-        stagger: 1,
+        stagger: 0.3,
         ease: "power2.easeOut"
     })
     
