@@ -41,18 +41,18 @@ t1
     },
     '<1'
     )
-    .from('.bubble', {
-        opacity: 0,
-        scale: 0,
-        duration: 1,
-        ease: 'back',
-    },
-    '<'
-    )
-    .from('.bubble-text ul li', {
-        y: 100,
-        opacity: 0,
-        stagger: 1,
-        ease: "power2.easeOut"
-    })
+    // .from('.bubble', {
+    //     opacity: 0,
+    //     scale: 0,
+    //     duration: 1,
+    //     ease: 'back',
+    // },
+    // '<'
+    // )
+    // .from('.bubble-text ul li', {
+    //     y: 100,
+    //     opacity: 0,
+    //     stagger: 1,
+    //     ease: "power2.easeOut"
+    // })
     
