@@ -29,14 +29,13 @@ main img {
     width: 100%;
 }
 span.note {
-    color: var(--note-color);
-    color: var(--gray-color);
+    /* color: var(--note-color); */
     display: block;
+    font-size: 0.7rem;
 }
 span.note::before, ul.notes > li::before {
-    content: '';
+    content: '※';
     position: relative;
-    padding-right: 20%;
 }
 .flame-line {
     margin-bottom: 60px;
@@ -140,10 +139,15 @@ span.note::before, ul.notes > li::before {
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
-#support .support-map span.fee {
+#support .support-map .support-fee {
     color: var(--blue-color);
     font-size: 1.7rem;
     padding-left: 5%;
+}
+#support .support-map .support-fee-extra {
+    left: 20%;
+    display: block;
+    position: relative;
 }
 #support .support-map .fees img {
     position: absolute;
@@ -202,6 +206,8 @@ span.note::before, ul.notes > li::before {
 }
 .options {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 10px;
 }
 .option {
@@ -233,16 +239,16 @@ span.note::before, ul.notes > li::before {
     height: 40px;
 }
 #option_1 .option-title::before {
-    background-image: url(/img/service/icon_option_eye.png);
+    background-image: url(../img/service/icon_option_eye.png);
 }
 #option_2 .option-title::before {
-    background-image: url(/img/service/icon_option_eye.png);
+    background-image: url(../img/service/icon_option_eye.png);
 }
 #option_3 .option-title::before {
-    background-image: url(/img/service/icon_option_eye.png);
+    background-image: url(../img/service/icon_option_eye.png);
 }
 #option_4 .option-title::before {
-    background-image: url(/img/service/icon_option_eye.png);
+    background-image: url(../img/service/icon_option_eye.png);
 }
 
 .option-ribbon {
@@ -253,19 +259,32 @@ span.note::before, ul.notes > li::before {
     position: relative;
     left: -5px;
 }
-
-.option-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .option-image, .option-text {
     padding: 0 20px;
 }
 .option-image img {
     margin-bottom: 10px;
     box-shadow: 1px 1px 2px black;
+}
+.option-fee {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+.option-fee-text {
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 1rem;
+}
+.option-fee-yen {
+    color: var(--blue-color);
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    /* -webkit-text-stroke: 1px white;
+    text-stroke: 1px white; */
 }
 
 
@@ -295,6 +314,15 @@ span.note::before, ul.notes > li::before {
 
 
 /* Media Queries  */
+/* Tablet  */
+@media screen and (max-width:75em) {
+    #options .option {
+        width: 45%;
+        flex: none;
+    }
+}
+
+/* Mobile  */
 @media screen and (max-width: 768px) {
     .mobile-hidden {
         display: none;
@@ -312,12 +340,7 @@ span.note::before, ul.notes > li::before {
     #support .support-map .fees {
         width: 90%;
     }
-
-    #options .options {
-        flex-direction: column;
-    }
-    #options .options .option-content {
-        display: flex;
-        flex-direction: row;
+    #options .option {
+        width: 100%;
     }
 }
