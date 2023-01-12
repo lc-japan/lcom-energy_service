@@ -64,7 +64,7 @@ t2
 // Concerns Section Timeline
 const t1 = gsap.timeline({
     scrollTrigger: {
-        trigger: '#concerns',
+        trigger: '#concerns h2',
         start: "top 90%",
         // markers: true
       }
