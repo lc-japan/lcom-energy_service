@@ -35,6 +35,10 @@ h3 {
 main img {
     width: 100%;
 }
+a:hover img {
+    opacity: initial;
+}
+
 span.note {
     /* color: var(--note-color); */
     display: block;
@@ -486,9 +490,8 @@ h1 {
 }
 #contact .telemail .telephono a {
     color: white;
-    font-size: 2rem;
-    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
-    width: fit-content;
+    font-size: 3rem;
+    width: 100%;
     font-weight: 600;
     letter-spacing: 0.05em;
     font-family: "Times New Roman", Times, serif;
@@ -496,8 +499,13 @@ h1 {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s;
 }
-#contact .telemail .telephono a::before {
+#contact .telemail .telephono a:hover {
+    color: var(--yellow-color);
+}
+/* #contact .telemail .telephono a::before {
     content: "";
     background-image: url(../img/service/tel_white.png);
     background-size: contain;
@@ -507,6 +515,10 @@ h1 {
     position: relative;
     width: 1.2em;
     height: 1em;
+} */
+#contact .telemail .telephono a img {
+    width: auto;
+    height:36px;
 }
 #contact .telemail .telephono p, #contact .telemail .e-rika p {
     background: white;
@@ -583,4 +595,14 @@ h1 {
     #options .option-image img {
         width: 49%;
     }
+    #contact .telemail .telephono a {
+        font-size: 2.5rem;
+    }
+    #contact .telemail .telephono a img {
+        height: 30px;
+    }
+    #contact .telemail .telephono p {
+        font-size: 0.85rem;
+    }
+
 }
