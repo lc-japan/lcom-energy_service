@@ -249,6 +249,7 @@ span.note::before, ul.notes > li::before {
 #support {
     background: var(--gray-color);
     padding-bottom: calc(50px + var(--options-title-height));
+    overflow: hidden;
 }
 #support h2 {
     padding: 1em 0;
