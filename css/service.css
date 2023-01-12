@@ -492,6 +492,7 @@ span.note::before, ul.notes > li::before {
     align-items: center;
     justify-content: space-between;
     transition: color 0.3s;
+    width: 100%;
 }
 #contact .telemail .telephono a:hover {
     color: var(--yellow-color);
