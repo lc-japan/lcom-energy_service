@@ -6,13 +6,14 @@
     --green-color:#029405;
     --dark-blue-color: #004e97;
     --note-color:#9a9064;
-    --gray-color: #dadada;
+    --gray-color: #dddddd;
     --gray-square-size: 60px;
     --options-title-height: 50px;
 }
 
 body {
     font-size: 16px;
+    color: black;
 }
 section {
     padding: 80px 0;
@@ -237,7 +238,7 @@ span.note::before, ul.notes > li::before {
 
 /* Support Section  */
 #support {
-    background: var(--beige-color);
+    background: var(--gray-color);
     padding-bottom: calc(50px + var(--options-title-height));
 }
 #support h2 {
@@ -357,11 +358,12 @@ span.note::before, ul.notes > li::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 20px;
 }
 .option {
     flex: 1;
-    background: var(--beige-color);
+    background: var(--gray-color);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -406,7 +408,7 @@ span.note::before, ul.notes > li::before {
     background-size: 100% 100%;
     width: 100%;
     position: relative;
-    left: -5px;
+    left: -6px;
 }
 .option-image, .option-text {
     padding: 0 20px;
@@ -452,6 +454,7 @@ span.note::before, ul.notes > li::before {
 #contact h2 p {
     font-size: 1rem;
     word-break: keep-all;
+    color: white;
 }
 #contact h2 span {
     color: var(--yellow-color);
@@ -504,6 +507,9 @@ span.note::before, ul.notes > li::before {
     }
     #support .support-map .fees {
         width: 90%;
+    }
+    #support table th, #support table td {
+        font-size: 0.9rem;
     }
     #options .option {
         width: 100%;
