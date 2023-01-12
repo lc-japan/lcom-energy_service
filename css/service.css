@@ -55,19 +55,11 @@ span.note::before, ul.notes > li::before {
     display: block;
 }
 
-/* Header (Jumbotron)  */
-.display-3 {
-    margin-top: 0;
-}
-h1 {
-    text-shadow: 2px 2px 2px black;
-    /* font-style: italic; */
-}
-@media (max-width: 47.9em) {
-.jumbotron {
-    height: 50vh!important;
-    padding-top: 12rem!important;
-}
+.navbar {
+    margin-bottom: 0;
+    background: url(../img/solar-img3.jpg) no-repeat center bottom;
+    background-size: cover;
+    border-radius: 0;
 }
 
 /* Intro Section  */
