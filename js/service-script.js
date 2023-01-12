@@ -19,21 +19,7 @@ gup.forEach(item => {
 })
 
 
-
-
 // Intro Section 
-// gsap.from(".intro_point_item", {
-//     scrollTrigger: {
-//         trigger: ".intro_point", 
-//         start: "top 80%",
-//     },
-//     y: 100,
-//     autoAlpha: 0,
-//     stagger: 0.5,
-//     ease: "sine.out",
-//     duration: 1.5
-// })
-// Intro Section Timeline
 const t2 = gsap.timeline({
     scrollTrigger: {
         trigger: '#intro',
@@ -49,7 +35,7 @@ t2
     })
     .from('.intro_point', {
         y: 100,
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
         ease: 'sine.out'
     },
@@ -58,21 +44,21 @@ t2
 
 
 // TABLE LOLOLOL
-gsap.from(".maintenance-table td", {
-    scrollTrigger: {
-        trigger: ".maintenance-table", 
-        start: "top 80%",
-    },
-    y: 100,
-    autoAlpha: 0,
-    stagger: {
-        amount: 3,
-        from: "random",
-        repeat: -1,
-    },
-    ease: "sine.out",
-    duration: 1
-})
+// gsap.from(".maintenance-table td", {
+//     scrollTrigger: {
+//         trigger: ".maintenance-table", 
+//         start: "top 80%",
+//     },
+//     y: 100,
+//     autoAlpha: 0,
+//     stagger: {
+//         amount: 3,
+//         from: "random",
+//         repeat: -1,
+//     },
+//     ease: "sine.out",
+//     duration: 1
+// })
 
 
 // Concerns Section Timeline
@@ -90,14 +76,14 @@ t1
         ease: 'sine.out'
     })
     .from('.scream-image', {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
         ease: 'sine.out'
     },
     '<1'
     )
     .from('.bubble', {
-        opacity: 0,
+        autoAlpha: 0,
         stagger: 0.3,
         ease: "power2.easeOut"
     })
