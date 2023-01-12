@@ -473,15 +473,61 @@ h1 {
     color: var(--yellow-color);
     font-size: 1rem;
 }
-#contact .tel {
-    font-size: 3rem;
+#contact .telemail {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#contact .telemail .telephono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#contact .telemail .telephono a {
+    color: white;
+    font-size: 2rem;
     font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
     width: fit-content;
-    text-indent: initial;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 34px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
-#contact .tel a {
+#contact .telemail .telephono a::before {
+    content: "";
+    background-image: url(../img/service/tel_white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: relative;
+    width: 1.2em;
+    height: 1em;
+}
+#contact .telemail .telephono p, #contact .telemail .e-rika p {
+    background: white;
+    color: var(--dark-blue-color);
+    font-weight: 700;
+}
+#contact .telemail .next {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+#contact .telemail .e-rika a {
     color: white;
+    height: 34px;
+    position: relative;
 }
+#contact .telemail .e-rika a::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 6 Free";
+}
+
 
 
 /* SNS Section  */
