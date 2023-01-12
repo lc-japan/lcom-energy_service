@@ -7,6 +7,7 @@
     --dark-blue-color: #004e97;
     --note-color:#9a9064;
     --gray-color: #dddddd;
+    --dark-gray-color: #a1a1a1;
     --gray-square-size: 60px;
     --options-title-height: 50px;
 }
@@ -50,6 +51,20 @@ span.note::before, ul.notes > li::before {
     display: block;
 }
 
+/* Header (Jumbotron)  */
+.display-3 {
+    margin-top: 0;
+}
+h1 {
+    text-shadow: 2px 2px 2px black;
+    /* font-style: italic; */
+}
+@media (max-width: 47.9em) {
+.jumbotron {
+    height: 50vh!important;
+    padding-top: 12rem!important;
+}
+}
 
 /* Intro Section  */
 #intro {
@@ -318,7 +333,7 @@ span.note::before, ul.notes > li::before {
     margin-bottom: 0;
 }
 #support table th, #support table td {
-    border: 2px solid black;
+    border: 2px solid var(--dark-gray-color);
     text-align: center;
     color: black;
     line-height: 2;
@@ -372,8 +387,7 @@ span.note::before, ul.notes > li::before {
     text-align: center;
     background: var(--blue-color);
     color: white;
-    font-size: 1.5rem;
-    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
+    font-size: 1.7rem;
     line-height: 2.5;
     margin-bottom: 0;
     display: flex;
@@ -434,8 +448,7 @@ span.note::before, ul.notes > li::before {
     font-size: 1.7rem;
     font-weight: 900;
     margin-bottom: 0;
-    /* -webkit-text-stroke: 1px white;
-    text-stroke: 1px white; */
+    /* font-family: "Times New Roman", Times, serif; */
 }
 
 
