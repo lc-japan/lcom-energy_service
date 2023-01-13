@@ -155,7 +155,9 @@ span.note::before, ul.notes > li::before {
 }
 #concerns h2 {
     color: white;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
+    font-size: 3.5rem;
+    font-size: clamp(1.25rem, 1rem + 3vw, 3.5rem);
 }
 #concerns h2 span {
     display: inline-block;
@@ -256,6 +258,8 @@ span.note::before, ul.notes > li::before {
     border-top: 2px solid;
     border-bottom: 2px solid;
     margin-bottom: 1em;
+    max-width: 90%;
+    margin-inline: auto;
 }
 #support .two-col {
     display: flex;
@@ -287,11 +291,16 @@ span.note::before, ul.notes > li::before {
 #support .support-map .fees li {
     font-size: 1.2rem;
     margin-bottom: 5px;
+    line-height: 1.2;
 }
 #support .support-map .support-fee {
     color: var(--blue-color);
-    font-size: 1.7rem;
+    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.3rem + 2vw, 2.5rem);
+    text-shadow: 2px 2px 2px var(--dark-blue-color);
     padding-left: 5%;
+    white-space: nowrap;
+    display: inline-block;
 }
 #support .support-map .support-fee-extra {
     left: 17%;
@@ -457,10 +466,10 @@ span.note::before, ul.notes > li::before {
     text-align: center;
     line-height: 1.5;
     /* word-break: keep-all; */
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 #contact h2 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     word-break: keep-all;
     color: white;
 }
@@ -517,7 +526,7 @@ span.note::before, ul.notes > li::before {
     color: white;
     position: relative;
     border: 1px solid white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 2rem;
     transition: all 0.3s;
 }

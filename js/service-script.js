@@ -78,9 +78,9 @@ t1
     .from('.scream-image', {
         autoAlpha: 0,
         duration: 1,
-        ease: 'sine.out'
+        ease: 'Power2.easeInOut'
     },
-    '<1'
+    '<'
     )
     .from('.bubble', {
         autoAlpha: 0,
@@ -88,3 +88,23 @@ t1
         ease: "power2.easeOut"
     })
     
+
+// Support Fee 
+const fee = gsap.utils.toArray('#support .support-map .support-fee');
+fee.forEach(item => {
+    gsap.fromTo(item, {
+        scale: 5,
+        autoAlpha: 0,
+    },
+    {
+        scale: 1,
+        autoAlpha: 1,
+        scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            // markers: true,
+        },
+        ease: "sine.out",
+        duration: 0.7
+    },)
+})
